@@ -1,0 +1,14 @@
+
+@font-face {
+  font-family: 'Archer Medium';
+  src: url('assets/fonts/Archer Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+
+.royal{
+  font-family: 'Archer Medium', sans-serif;
+  font-weight: normal;
+}
