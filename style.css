@@ -7,8 +7,175 @@
   font-display: swap; 
 }
 
+:root {
+  --welcome-progress: 0;
+}
 
-.royal{
+body {
+  margin: 0;
+  color: #262626;
+  background:  rgb(226, 226, 226);
+  overflow-x: hidden;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+
+    background: transparent;
+    color: inherit;
+
+    z-index: 1000;
+
+    transition:
+        background .3s,
+        padding .3s;
+}
+
+#welcome{
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+    margin:0;
+    margin-top: 1rem;
+
+    z-index:900;
+}
+
+#contacts{
+    position:fixed;
+
+    left:50%;
+    bottom:3rem;
+    width: 100%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:.6rem;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    font-size:.9rem;
+
+    z-index:900;
+}
+
+#contacts a{
+    color:inherit;
+    text-decoration:none;
+    font-family: 'Archer Medium', sans-serif;
+}
+
+#navbar.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .35rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+/* Title */
+#navbar.nav #welcome{
+    position: static;
+    transform: none;
+    margin: 0;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+/* Contacts UNDER the title */
+#navbar.nav #contacts{
+    position: static;
+    transform: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem .75rem;
+
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+#hero{
+    height:100vh;
+}
+
+.portfolio {
+    max-width: 100vw;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-section {
+    max-width: 900px;
+    margin-bottom: 4rem;
+}
+
+.resume-section h2 {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.divider {
+    height: 1px;
+    background: currentColor;
+    opacity: .25;
+    margin-bottom: 1.5rem;
+}
+
+.entry {
+    margin-bottom: 2rem;
+}
+
+.entry-header,
+.entry-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2rem;
+}
+
+.entry h3 {
+    margin: 0;
+}
+
+.entry ul {
+    margin-top: .75rem;
+    padding-left: 1.25rem;
+    line-height: 1.7;
+}
+
+.tech {
+    opacity: .7;
+    margin: .3rem 0 1rem;
+    font-style: italic;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skills-grid strong {
+    display: block;
+    margin-bottom: .4rem;
+}
+
+#surname {
+    opacity: 0;
+}
+
+.royal {
   font-family: 'Archer Medium', sans-serif;
   font-weight: normal;
 }
