@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sridev k</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body data-theme="">
     <header id="navbar">
@@ -67,12 +69,15 @@
 
             <article class="entry">
                 <div class="entry-header">
-                    <h3>Indian Institute of Space Science and Technology (IIST) — Research Intern (GeoAI)</h3>
+                    <h3>Research Intern (GeoAI)</h3>
                     <span>May 2026 – Jun 2026</span>
                 </div>
+                <div class="entry-subheader">
+                    <p><i><b>Indian Institute of Space Science and Technology (IIST)  </b></i></p>
 
+                </div>
                 <ul>
-                    <li>Investigated machine learning, computer vision, and transformer-based Geospatial Foundation Models for remote sensing applications</li>
+                    <li>Researched machine learning, computer vision, and transformer-based Geospatial Foundation Models for remote sensing applications</li>
                     <li>Implemented and evaluated SAR-based flood detection pipelines using Sentinel-1 data, gaining experience in satellite image preprocessing, deep learning workflows, and model evaluation.</li>
                 </ul>
             </article>
@@ -82,35 +87,166 @@
             <h2 class="royal section-header">Projects</h2>
             <div class="divider"></div>
 
-            <article class="entry">
-                <h3>Entry header</h3>
-                <p class="tech">Entry subheader</p>
+            <div class="projects-grid">
+                <article class="project-card project-card--featured">
+                    <div class="project-top">
+                        <div>
+                            <p class="project-kicker">Full Stack AI Platform</p>
+                            <h3>Tutoring AI</h3>
+                        </div>
+                        <span class="project-time"><img src="https://cdn.simpleicons.org/clockify/000000" alt="" aria-hidden="true"> 2 months</span>
+                    </div>
 
-                <ul>
-                    <li>Generated.</li>
-                    <li>Integrated.</li>
-                    <li>Implemented.</li>
-                    <li>Containerized.</li>
-                </ul>
-            </article>
+                    <p class="project-summary">A full-stack AI platform that turns text prompts into educational animation videos by generating Manim scripts and orchestrating AI-assisted rendering workflows.</p>
 
-        </section>
+                    <div class="project-meta">
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" aria-hidden="true">Next.js</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/typescript/000000" alt="" aria-hidden="true">TypeScript</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/django/000000" alt="" aria-hidden="true">Django</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/celery/000000" alt="" aria-hidden="true">Celery</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/redis/000000" alt="" aria-hidden="true">Redis</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/docker/000000" alt="" aria-hidden="true">Docker</span>
+                        <span class="project-pill"><i class="bi bi-person-fill project-pill-icon" aria-hidden="true"></i>Solo</span>
+                    </div>
 
-        <section class="resume-section">
-            <h2 class="royal section-header">Awards and certifications</h2>
-            <div class="divider"></div>
+                    <ul class="project-features">
+                        <li>Integrated Mistral AI, OpenAI, and Google Gemini to generate and refine Python Manim animation scripts.</li>
+                        <li>Built asynchronous video processing with Celery and Redis to handle concurrent rendering jobs efficiently.</li>
+                        <li>Containerized the application stack with Docker Compose for frontend, API, and worker services.</li>
+                    </ul>
 
-            <article class="entry">
-                <h3>Entry header</h3>
-                <p class="tech">Entry subheader</p>
+                    <div class="project-links">
+                        <a href="https://github.com/sridevkp" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"> GitHub</a>
+                        <a href="https://sridev.me" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="" aria-hidden="true"> Preview</a>
+                    </div>
+                </article>
 
-                <ul>
-                    <li>Generated.</li>
-                    <li>Integrated.</li>
-                    <li>Implemented.</li>
-                    <li>Containerized.</li>
-                </ul>
-            </article>
+                <article class="project-card">
+                    <div class="project-top">
+                        <div>
+                            <p class="project-kicker">Python Library</p>
+                            <h3>Pocket Agent</h3>
+                        </div>
+                        <span class="project-time"><img src="https://cdn.simpleicons.org/clockify/000000" alt="" aria-hidden="true"> 3 weeks</span>
+                    </div>
+
+                    <p class="project-summary">A reusable Python library for agentic LLM task execution with a unified provider interface and MCP-driven tool integration.</p>
+
+                    <div class="project-meta">
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/python/000000" alt="" aria-hidden="true">Python</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/openai/000000" alt="" aria-hidden="true">OpenAI</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/googlegemini/000000" alt="" aria-hidden="true">Gemini</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/mistralai/000000" alt="" aria-hidden="true">Mistral</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/modelcontextprotocol/000000" alt="" aria-hidden="true">MCP</span>
+                        <span class="project-pill"><i class="bi bi-person-fill project-pill-icon" aria-hidden="true"></i>Solo</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li>Built a plug-and-play interface supporting multiple LLM providers with backend integration.</li>
+                        <li>Implemented MCP client support for dynamic tool registration and asynchronous external execution.</li>
+                        <li>Added a structured plan-act-observe-respond workflow for reliable multi-step tool use.</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/sridevkp" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"> GitHub</a>
+                        <a href="https://sridev.me" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="" aria-hidden="true"> Preview</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <div>
+                            <p class="project-kicker">Real-Time Multiplayer Game</p>
+                            <h3>Chess Online</h3>
+                        </div>
+                        <span class="project-time"><img src="https://cdn.simpleicons.org/clockify/000000" alt="" aria-hidden="true"> 4 weeks</span>
+                    </div>
+
+                    <p class="project-summary">A real-time multiplayer chess application with websocket matchmaking, canvas-based board rendering, and observability for distributed tracing and logs.</p>
+
+                    <div class="project-meta">
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/react/000000" alt="" aria-hidden="true">React</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/nodedotjs/000000" alt="" aria-hidden="true">Node.js</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/socketdotio/000000" alt="" aria-hidden="true">Socket.io</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/express/000000" alt="" aria-hidden="true">Express</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/tailwindcss/000000" alt="" aria-hidden="true">TailwindCSS</span>
+                        <span class="project-pill"><i class="bi bi-people-fill project-pill-icon" aria-hidden="true"></i>Group</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li>Implemented websocket-based matchmaking to pair players and synchronize game state in real time.</li>
+                        <li>Built the interactive chess board using React Konva for canvas-based 2D rendering.</li>
+                        <li>Added an OpenTelemetry observability stack for tracing, metrics, and centralized logging.</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/sridevkp" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"> GitHub</a>
+                        <a href="https://sridev.me" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="" aria-hidden="true"> Preview</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--featured">
+                    <div class="project-top">
+                        <div>
+                            <p class="project-kicker">Full Stack Web App</p>
+                            <h3>Campus E-Wallet</h3>
+                        </div>
+                        <span class="project-time"><img src="https://cdn.simpleicons.org/clockify/000000" alt="" aria-hidden="true"> 10 weeks</span>
+                    </div>
+
+                    <p class="project-summary">A campus-focused e-wallet system built for secure digital payments within the institute with auditable transaction flows.</p>
+
+                    <div class="project-meta">
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/nodedotjs/000000" alt="" aria-hidden="true">Node.js</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/postgresql/000000" alt="" aria-hidden="true">PostgreSQL</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/sqlite/000000" alt="" aria-hidden="true">SQL</span>
+                        <span class="project-pill">Transaction system</span>
+                        <span class="project-pill"><i class="bi bi-person-fill project-pill-icon" aria-hidden="true"></i>Solo</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li>Designed a normalized SQL database for users, wallets, transactions, and audit logs.</li>
+                        <li>Implemented role-based authentication with ACID-compliant transaction management.</li>
+                        <li>Optimized concurrency, indexing, and query performance for secure wallet operations.</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/sridevkp" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"> GitHub</a>
+                        <a href="https://sridev.me" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="" aria-hidden="true"> Preview</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <div>
+                            <p class="project-kicker">Geospatial / CV</p>
+                            <h3>ScanSAR</h3>
+                        </div>
+                        <span class="project-time"><img src="https://cdn.simpleicons.org/clockify/000000" alt="" aria-hidden="true"> 6 weeks</span>
+                    </div>
+
+                    <p class="project-summary">A SAR flood detection pipeline that analyzes Sentinel-1 data for remote-sensing workflows and model evaluation.</p>
+
+                    <div class="project-meta">
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/pytorch/000000" alt="" aria-hidden="true">PyTorch</span>
+                        <span class="project-pill"><img src="https://cdn.simpleicons.org/opencv/000000" alt="" aria-hidden="true">OpenCV</span>
+                        <span class="project-pill">ML pipeline</span>
+                        <span class="project-pill">Sentinel-1</span>
+                        <span class="project-pill"><i class="bi bi-people-fill project-pill-icon" aria-hidden="true"></i>Group</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li>Researched transformer-based geospatial foundation models for remote sensing tasks.</li>
+                        <li>Built preprocessing and evaluation steps for SAR flood segmentation workflows.</li>
+                        <li>Worked through satellite image preprocessing, model evaluation, and result interpretation.</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/sridevkp" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"> GitHub</a>
+                        <a href="https://sridev.me" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="" aria-hidden="true"> Preview</a>
+                    </div>
+                </article>
+            </div>
 
         </section>
 
@@ -119,24 +255,50 @@
             <div class="divider"></div>
 
             <div class="skills-grid">
-                <div>
+                <div class="skill-group">
                     <strong>Languages</strong>
-                    <p>Python, JavaScript, TypeScript, SQL, HTML, CSS</p>
+                    <ul class="skill-list">
+                        <li><img src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true">Python</li>
+                        <li><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" aria-hidden="true">JavaScript</li>
+                        <li><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true">TypeScript</li>
+                        <li><img src="https://cdn.simpleicons.org/sqlite/07405E" alt="" aria-hidden="true">SQL</li>
+                        <li><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" aria-hidden="true">HTML</li>
+                        <li><img src="https://cdn.simpleicons.org/css/663399" alt="" aria-hidden="true">CSS</li>
+                    </ul>
                 </div>
 
-                <div>
+                <div class="skill-group">
                     <strong>Frameworks</strong>
-                    <p>React, Next.js, Django, FastAPI, Node.js, Express</p>
+                    <ul class="skill-list">
+                        <li><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true">React</li>
+                        <li><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" aria-hidden="true">Next.js</li>
+                        <li><img src="https://cdn.simpleicons.org/django/092E20" alt="" aria-hidden="true">Django</li>
+                        <li><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" aria-hidden="true">FastAPI</li>
+                        <li><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="" aria-hidden="true">Node.js</li>
+                        <li><img src="https://cdn.simpleicons.org/express/000000" alt="" aria-hidden="true">Express</li>
+                    </ul>
                 </div>
 
-                <div>
+                <div class="skill-group">
                     <strong>Tools</strong>
-                    <p>Git, Docker, Redis, PostgreSQL, VS Code</p>
+                    <ul class="skill-list">
+                        <li><img src="https://cdn.simpleicons.org/git/F05032" alt="" aria-hidden="true">Git</li>
+                        <li><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" aria-hidden="true">Docker</li>
+                        <li><img src="https://cdn.simpleicons.org/redis/DC382D" alt="" aria-hidden="true">Redis</li>
+                        <li><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true">PostgreSQL</li>
+                        <li>VS Code</li>
+                    </ul>
                 </div>
 
-                <div>
+                <div class="skill-group">
                     <strong>AI / ML</strong>
-                    <p>LLM Integration, Computer Vision, PyTorch</p>
+                    <ul class="skill-list">
+                        <li>LLM Integration</li>
+                        <li><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" aria-hidden="true">OpenCV</li>
+                        <li><img src="https://cdn.simpleicons.org/langchain/7FC8FF" alt="" aria-hidden="true">Langchain</li>
+                        <li><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" aria-hidden="true">PyTorch</li>
+                        <li><img src="https://cdn.simpleicons.org/mediapipe/0097A7" alt="" aria-hidden="true">Mediapipe</li>
+                    </ul>
                 </div>
             </div>
         </section>
