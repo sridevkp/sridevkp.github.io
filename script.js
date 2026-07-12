@@ -28,8 +28,7 @@ scroll((progress) => {
     surname.style.opacity = p;
     surname.style.transform = `translateY(${20 * (1 - p)}px)`;
 
-    
-    navbar.style.backgroundColor=`rgba(226,226,226,${p})`;
+    navbar.style.setProperty('--bg-opacity', `${p}`);
     contacts.style.opacity = 1 - p;
 
     if (p > 0.98) {
@@ -39,4 +38,19 @@ scroll((progress) => {
         navbar.classList.remove("nav");
     }
 
+});
+
+window.onload = () => {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+        document.body.setAttribute("data-theme", currentTheme);
+    }
+};
+
+
+window.addEventListener("dblclick", () => {
+    const currentTheme = document.body.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "" : "dark";
+    document.body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
 });

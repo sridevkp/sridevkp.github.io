@@ -9,13 +9,39 @@
 
 :root {
   --welcome-progress: 0;
+    --color-text: #2e2e2e;
+    --color-background: rgb(214, 214, 214);
+        --navbar-bg-rgb: 216, 216, 216;
+    --color-surface: rgba(255, 255, 255, 0.12);
+    --color-shadow: rgba(0, 0, 0, 0.1);
+
+    --black-50: #f8f8f8;
+    --black-100: #ebebeb;
+    --black-200: #d6d6d6;
+    --black-300: #bdbdbd;
+    --black-400: #999999;
+    --black-500: #737373;
+    --black-600: #525252;
+    --black-700: #404040;
+    --black-800: #262626;
+    --black-900: #090909;
 }
+
+[data-theme="dark"] {
+    --color-text: var(--black-400);
+    --color-background: var(--black-900);
+    --navbar-bg-rgb: 10, 10, 10;
+    --color-surface: rgba(255, 255, 255, 0.08);
+    --color-shadow: rgba(0, 0, 0, 0.35);
+}
+
 
 body {
   margin: 0;
-  color: #262626;
-  background:  rgb(226, 226, 226);
+    color: var(--color-text);
+    background: var(--color-background);
   overflow-x: hidden;
+  font-family: Archer Medium, sans-serif;
 }
 
 #navbar{
@@ -27,7 +53,7 @@ body {
     padding: 1rem 2rem;
     box-sizing: border-box;
 
-    background: transparent;
+    background: rgba(var(--navbar-bg-rgb), var(--bg-opacity, 0));
     color: inherit;
 
     z-index: 1000;
@@ -80,7 +106,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: .35rem;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    box-shadow: 0 0 10px var(--color-shadow);
 }
 /* Title */
 #navbar.nav #welcome{
@@ -108,15 +134,22 @@ body {
 }
 
 .portfolio {
-    max-width: 100vw;
+    width: 100vw;
     padding: 8rem 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+    align-items: center;
 }
 
 .resume-section {
-    max-width: 900px;
+    width: 900px;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+    .resume-section {
+        width: 100%;
+    }
 }
 
 .resume-section h2 {
@@ -126,10 +159,14 @@ body {
     margin-bottom: .5rem;
 }
 
+.section-header span {
+    font-size: 1.5rem;
+}
+
 .divider {
-    height: 1px;
+    height: 2px;
     background: currentColor;
-    opacity: .25;
+    opacity: .7;
     margin-bottom: 1.5rem;
 }
 
