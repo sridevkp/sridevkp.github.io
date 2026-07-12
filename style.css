@@ -107,7 +107,6 @@ body {
     align-items: flex-start;
     gap: .35rem;
 }
-/* Title */
 #navbar.nav #welcome{
     position: static;
     transform: none;
@@ -115,7 +114,6 @@ body {
     font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
-/* Contacts UNDER the title */
 #navbar.nav #contacts{
     position: static;
     transform: none;
@@ -140,6 +138,12 @@ body {
     align-items: center;
 }
 
+@media (max-width: 700px) {
+    .portfolio {
+        padding-top: 9.5rem;
+    }
+}
+
 .resume-section {
     width: 900px;
     margin-bottom: 4rem;
@@ -153,7 +157,7 @@ body {
 
 .resume-section h2 {
     position: sticky;
-    top: 6rem;
+    top: calc(var(--navbar-sticky-offset, 5rem) - 2px);
     z-index: 700;
     display: block;
     width: 100%;
@@ -209,14 +213,6 @@ body {
     display: grid;
     gap: 1.5rem;
 }
-
-/* .skill-group {
-    padding: 1rem 1.1rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
-} */
 
 .skills-grid strong {
     display: block;
@@ -414,7 +410,7 @@ body {
   font-weight: normal;
 }
 
-[data-theme="dark"] .skill-group,
+
 [data-theme="dark"] .project-card {
     border-color: rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.04);
@@ -453,12 +449,4 @@ body {
     .project-card h3 {
         font-size: 1.05rem;
     }
-}
-.certifications li {
-    /* display: flex; */
-}
-.certifications span{
-    margin-left: max;
-    font-size: .85rem;
-    opacity: .7;
 }
