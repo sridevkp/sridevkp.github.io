@@ -14,6 +14,9 @@
         --navbar-bg-rgb: 216, 216, 216;
     --color-surface: rgba(255, 255, 255, 0.12);
     --color-shadow: rgba(0, 0, 0, 0.4);
+        --bg-layer-opacity: 0.08;
+        --bg-layer-filter: none;
+        --bg-layer-scale: 1.05;
 
     --black-50: #f8f8f8;
     --black-100: #ebebeb;
@@ -33,6 +36,8 @@
     --navbar-bg-rgb: 10, 10, 10;
     --color-surface: rgba(255, 255, 255, 0.08);
     --color-shadow: rgba(0, 0, 0, 0.35);
+    --bg-layer-opacity: 0.1;
+    --bg-layer-filter: invert(1) brightness(1.2) contrast(0.9);
 }
 
 
@@ -42,6 +47,68 @@ body {
     background: var(--color-background);
   overflow-x: hidden;
   font-family: Archer Medium, sans-serif;
+    position: relative;
+}
+
+#page-background {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+}
+
+.page-bg-layer {
+        position: absolute;
+        left: 50%;
+        /* inset: -6vh -6vw; */
+        width: 100vw;
+        /* max-width: 1000px; */
+        height: 100vh;
+        object-fit: contain;
+        object-position: center;
+        opacity: 0;
+        transform: translate3d(-50%, 1.25vh, 0) scale(var(--bg-layer-scale));
+        filter: var(--bg-layer-filter);
+        transition:
+                opacity .6s ease,
+                transform .8s ease,
+                filter .35s ease;
+}
+
+@media(max-width: 700px) {
+    .page-bg-layer {
+        bottom:0;
+    }
+}
+
+body[data-active-background="education"] .page-bg-layer[data-bg="education"],
+body[data-active-background="experience"] .page-bg-layer[data-bg="experience"],
+body[data-active-background="projects"] .page-bg-layer[data-bg="projects"],
+body[data-active-background="technical"] .page-bg-layer[data-bg="technical"] {
+        opacity: var(--bg-layer-opacity);
+        transform: translate3d(-50%, 5vh, 0) scale(var(--bg-layer-scale));
+}
+
+
+/* body[data-active-background="education"] .page-bg-layer[data-bg="education"]{
+    transform: translate3d(0, 20vh, 0) scale(0.6);
+}
+
+body[data-active-background="education"] .page-bg-layer[data-bg="education"]{
+    transform: translate3d(0, 20vh, 0) scale(0.6);
+} */
+
+body[data-active-background=""] .page-bg-layer {
+    opacity: 0;
+}
+
+body[data-theme="dark"] .page-bg-layer {
+        mix-blend-mode: screen;
+}
+
+body:not([data-theme="dark"]) .page-bg-layer {
+        mix-blend-mode: multiply;
 }
 
 #navbar{
@@ -137,6 +204,8 @@ body {
     display: flex;
     flex-direction: column;  
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 700px) {
@@ -149,6 +218,7 @@ body {
     width: 900px;
     min-height: 100vh;
     margin-bottom: 8rem;
+    position: relative;
 }
 
 @media (max-width: 900px) {
@@ -165,8 +235,9 @@ body {
     width: 100%;
     margin: 0 0 1rem;
     padding: .8rem 0 .6rem;
-    background: var(--color-background);
-    background-image: linear-gradient(to bottom, var(--color-background), var(--color-background));
+    backdrop-filter: blur(4px);
+    /* background: var(--color-background); */
+    /* background-image: linear-gradient(to bottom, var(--color-background), var(--color-background)); */
     text-transform: uppercase;
     letter-spacing: .08em;
     font-size: 1.25rem;
@@ -279,8 +350,13 @@ body {
     padding: 1rem 1.15rem;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 1.1rem;
-    background: rgba(255, 255, 255, 0.08);
+    /* background: rgba(255, 255, 255, 0.08); */
+    backdrop-filter: blur(3px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+.project-card:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(6px);
 }
 
 .project-card--featured {

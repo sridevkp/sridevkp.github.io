@@ -5,11 +5,43 @@ const hi = document.getElementById("hi");
 const surname = document.getElementById("surname");
 const navbar = document.getElementById("navbar");
 const contacts = document.getElementById("contacts");
+const sections = Array.from(document.querySelectorAll(".resume-section[data-bg]"));
 const mobileTransitionEnd = 0.1//window.matchMedia("(max-width: 700px)").matches ? 0.1 : 0.1;
+
+const activeBackground = { value: document.body.getAttribute("data-active-background") || "education" };
 
 const updateSectionStickyOffset = () => {
     const offset = navbar.offsetHeight;
     document.documentElement.style.setProperty("--navbar-sticky-offset", `${offset}px`);
+};
+
+const updateActiveBackground = () => {
+    if (!sections.length) {
+        return;
+    }
+
+    let bestSection = sections[0];
+    let bestScore = 0;
+
+    for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        const visibleTop = Math.max(rect.top, 0);
+        const visibleBottom = Math.min(rect.bottom, window.innerHeight);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+        const score = visibleHeight / Math.max(rect.height, 1);
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestSection = section;
+        }
+    }
+
+    const nextBackground = bestScore > 0 ? (bestSection.dataset.bg || activeBackground.value) : "";
+
+    if (nextBackground !== activeBackground.value) {
+        activeBackground.value = nextBackground;
+        document.body.setAttribute("data-active-background", nextBackground);
+    }
 };
 
 animate(
@@ -43,12 +75,15 @@ scroll((progress) => {
     }
 
     updateSectionStickyOffset();
+    updateActiveBackground();
 
 });
 
 window.addEventListener("resize", updateSectionStickyOffset);
+window.addEventListener("resize", updateActiveBackground);
 
 new ResizeObserver(updateSectionStickyOffset).observe(navbar);
+new ResizeObserver(updateActiveBackground).observe(document.body);
 
 window.onload = () => {
     const currentTheme = localStorage.getItem("theme");
@@ -57,6 +92,7 @@ window.onload = () => {
     }
 
     updateSectionStickyOffset();
+    updateActiveBackground();
 };
 
 
