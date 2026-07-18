@@ -72,8 +72,9 @@ body {
     transform:translate(-50%,-50%);
     margin:0;
     margin-top: 1rem;
-
+    
     z-index:900;
+    text-shadow: 0 4px 10px var(--color-text);
 }
 
 #contacts{
@@ -168,6 +169,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .08em;
     font-size: 1.25rem;
+    text-shadow: 0 4px 7px var(--color-text);
 }
 
 .section-header span {
