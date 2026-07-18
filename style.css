@@ -13,7 +13,7 @@
     --color-background: rgb(214, 214, 214);
         --navbar-bg-rgb: 216, 216, 216;
     --color-surface: rgba(255, 255, 255, 0.12);
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-shadow: rgba(0, 0, 0, 0.4);
 
     --black-50: #f8f8f8;
     --black-100: #ebebeb;
@@ -74,7 +74,7 @@ body {
     margin-top: 1rem;
     
     z-index:900;
-    text-shadow: 0 4px 10px var(--color-text);
+    text-shadow: 0 4px 8px var(--color-text);
 }
 
 #contacts{
@@ -147,7 +147,8 @@ body {
 
 .resume-section {
     width: 900px;
-    margin-bottom: 4rem;
+    min-height: 100vh;
+    margin-bottom: 8rem;
 }
 
 @media (max-width: 900px) {
@@ -162,15 +163,16 @@ body {
     z-index: 700;
     display: block;
     width: 100%;
-    margin: 0 0 .1rem;
+    margin: 0 0 1rem;
     padding: .8rem 0 .6rem;
     background: var(--color-background);
     background-image: linear-gradient(to bottom, var(--color-background), var(--color-background));
     text-transform: uppercase;
     letter-spacing: .08em;
     font-size: 1.25rem;
-    text-shadow: 0 4px 7px var(--color-text);
+    text-shadow: 0 2px 4px var(--color-text);
 }
+
 
 .section-header span {
     font-size: 1.5rem;

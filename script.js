@@ -5,7 +5,7 @@ const hi = document.getElementById("hi");
 const surname = document.getElementById("surname");
 const navbar = document.getElementById("navbar");
 const contacts = document.getElementById("contacts");
-const mobileTransitionEnd = window.matchMedia("(max-width: 700px)").matches ? 0.18 : 0.25;
+const mobileTransitionEnd = 0.1//window.matchMedia("(max-width: 700px)").matches ? 0.1 : 0.1;
 
 const updateSectionStickyOffset = () => {
     const offset = navbar.offsetHeight;
